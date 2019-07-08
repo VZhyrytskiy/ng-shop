@@ -16,21 +16,21 @@
 
 #4
 Добавьте несколько простых свойств для компонента ProductComponent и несколько свойств в виде массива. Выведите их в темплейт:
-    - name: string
-    - description: string
-    - price: number
-    - category: enum (Создайте enum с несколькими категориями) https://www.typescriptlang.org/docs/handbook/enums.html
-    - isAvailable: boolean
-    - ...
+- name: string
+- description: string
+- price: number
+- category: enum (Создайте enum с несколькими категориями) https://www.typescriptlang.org/docs/handbook/enums.html
+- isAvailable: boolean
+- ...
 
 #5
 Добавьте кнопку Buy. Реализуйте обработчик события клик onBuy(), который выводит в консоль сообщение о покупке товара.
 
 #6
 Создайте сервис ProductsService, который будет возвращать товары. Модель товара опишите интерфейсом и/или классом, 
-   который реализует данный интерфейс.
-   Создайте компонент ProductListComponent. Используйте в нем сервис ProductsService, отобразите данные на странице 
-   c помощью директивы *ngFor.
+который реализует данный интерфейс.
+Создайте компонент ProductListComponent. Используйте в нем сервис ProductsService, отобразите данные на странице 
+c помощью директивы *ngFor.
 
 #7
 Создайте компонент (ng g c cart) и используйте его в AppComponent темплейте. Компонент должен отображать список купленых товаров. 

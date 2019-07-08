@@ -1,7 +1,11 @@
 <div class="container">
 
-    <div class="">
-
+    <div class="mt-2">
+        <div>Name: {{ product.name }}</div>
+        <div>Description: {{ product.description }}</div>
+        <div>Price: {{ product.price }}</div>
+        <div>Category: {{ product.category.toString() }}</div>
+        <div>Is available: {{ product.isAvailable }}</div>
     </div>
 
     <div class="mt-2">
