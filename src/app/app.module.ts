@@ -21,9 +21,13 @@ import { CartService } from './services/cart-service';
     AppRoutingModule
   ],
   providers: [
-    ProductsService,
-    CartService
+    // ProductsService, // этот сервис уже зарегистрирован через его собственный декоратор
+    // CartService // аналогично
   ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+
+// Не нашел changelog файл.
+// При старте подумал, что вы ничего не реализовали
+// Но когда глянул код, то увидел, что используете роутинг.

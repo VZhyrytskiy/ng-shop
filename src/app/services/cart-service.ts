@@ -11,6 +11,7 @@ export class CartService {
     }
 
     getItems(): Product[] {
+      // Товары и корзина - обычно это разные коллекции товаров.
         return this.productsService.getAll();
     }
 }
