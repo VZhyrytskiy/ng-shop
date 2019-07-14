@@ -11,6 +11,7 @@ import { SharedModule } from './shared/shared.module';
 import { CoreModule } from './core/core.module';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { LayoutModule } from './layout/layout.module';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [
@@ -18,6 +19,7 @@ import { LayoutModule } from './layout/layout.module';
   ],
   imports: [
     NgbModule,
+    RouterModule,
     BrowserModule,
     AppRoutingModule,
     LayoutModule,
@@ -28,7 +30,7 @@ import { LayoutModule } from './layout/layout.module';
   ],
   providers: [
     ProductsService,
-    CartService
+    { provide: CartService, useClass: CartService },
   ],
   bootstrap: [AppComponent]
 })
