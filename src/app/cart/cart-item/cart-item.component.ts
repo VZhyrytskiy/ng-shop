@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, HostListener } from '@angular/core';
+import { Component, OnInit, Input, HostListener, Output, EventEmitter } from '@angular/core';
 import { CartServiceItem } from 'src/app/models/cart-service-item';
 import { Product } from 'src/app/models/product';
 
@@ -12,6 +12,10 @@ export class CartItemComponent implements OnInit {
   @Input()
   item: CartServiceItem<Product>;
 
+  @Output()
+  itemChanged: EventEmitter<CartServiceItem<Product>> = new EventEmitter();
+
+  // TODO HostListener should be replaced to parent component to fill whole item
   public hovered: boolean = false;
 
   @HostListener('mouseenter') 
@@ -30,6 +34,17 @@ export class CartItemComponent implements OnInit {
     if (this.item == null) {
       throw Error('Item should not be null');
     }
+  }
+
+  addOne(): void {
+
+    this.item.addOne();
+    this.itemChanged.emit(this.item);
+  }
+
+  removeOne(): void {
+    this.item.removeOne();
+    this.itemChanged.emit(this.item);
   }
 
 }

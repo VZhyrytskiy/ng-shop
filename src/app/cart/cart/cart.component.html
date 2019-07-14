@@ -2,9 +2,16 @@
     <div class="mt-2" *ngIf="cartItems.length > 0; else noItemsInCart">
         <ul class="list-group">
             <li class="list-group-item" *ngFor="let item of cartItems">
-                <app-cart-item  [item]="item"></app-cart-item>
+                <app-cart-item  [item]="item" (itemChanged)="itemChanged($event)"></app-cart-item>
             </li>
         </ul>
+    </div>
+
+    <hr>
+
+    <div class="mt-2">
+        <div>Items count: {{ totalCount }}</div>
+        <div>Items totalCosts: {{ totalCount }}</div>
     </div>
     <ng-template #noItemsInCart>
         There are no items

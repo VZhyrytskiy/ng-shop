@@ -34,6 +34,18 @@ export class CartService {
         console.log(`Removed item ${item.item.name}`);
     }
 
+    getTotalCosts(): number {
+        let totalCosts = 0;
+        this.items.map(x => x.cost).forEach(x => totalCosts += x);
+        return totalCosts;
+    }
+
+    getTotalItemsCount(): number {
+        let totalCount = 0;
+        this.items.map(x => x.count).forEach(x => totalCount += x);
+        return totalCount;
+    }
+
     private createCartServiceItem(product: Product): CartServiceItem<Product> {
         return new CartServiceItem<Product>(this.copyObject(product));
     }

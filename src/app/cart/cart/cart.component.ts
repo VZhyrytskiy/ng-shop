@@ -12,12 +12,28 @@ export class CartComponent implements OnInit {
 
   cartItems: Array<CartServiceItem<Product>> = [];
 
+  totalCosts = 0;
+  totalCount = 0;
+
+  get itemsCount(): number {
+    return this.cartItems.length;
+  }
+
   constructor(
     private cartService: CartService
   ) { }
 
   ngOnInit() {
     this.cartItems = this.cartService.getItems();
+    this.calculateTotalValues();
   }
 
+  itemChanged(item: CartServiceItem<Product>): void {
+    this.calculateTotalValues();
+  }
+
+  private calculateTotalValues(): void {
+    this.totalCosts = this.cartService.getTotalCosts();
+    this.totalCount = this.cartService.getTotalItemsCount();
+  }
 }
