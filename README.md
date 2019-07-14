@@ -2,7 +2,7 @@
 
 ## Implemented tasks
 1. https://github.com/maximgorbatyuk/ng-shop/blob/master/tasks/task_1.md
-2. https://github.com/maximgorbatyuk/ng-shop/blob/master/tasks/task_1.md
+2. https://github.com/maximgorbatyuk/ng-shop/blob/master/tasks/task_2.md
 
 
 ## Technologies stack
