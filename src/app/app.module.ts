@@ -9,12 +9,14 @@ import { CartModule } from './cart/cart.module';
 import { ProductsModule } from './products/products.module';
 import { SharedModule } from './shared/shared.module';
 import { CoreModule } from './core/core.module';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
     AppComponent
   ],
   imports: [
+    NgbModule,
     BrowserModule,
     AppRoutingModule,
     CartModule,
