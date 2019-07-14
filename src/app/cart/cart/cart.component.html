@@ -1,6 +1,10 @@
 <div class="container">
     <div class="mt-2" *ngIf="cartItems.length > 0; else noItemsInCart">
-        <app-cart-item *ngFor="let item of cartItems" [item]="item"></app-cart-item>
+        <ul class="list-group">
+            <li class="list-group-item" *ngFor="let item of cartItems">
+                <app-cart-item  [item]="item"></app-cart-item>
+            </li>
+        </ul>
     </div>
     <ng-template #noItemsInCart>
         There are no items

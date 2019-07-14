@@ -9,7 +9,6 @@ import { ApplicationTitleService } from './services/application-title-service';
 export class AppComponent implements OnInit {
 
   ngOnInit(): void {
-    console.log(this.appHeaderTitle.nativeElement);
     this.appHeaderTitle.nativeElement.innerHTML = 'Application title';
   }
 

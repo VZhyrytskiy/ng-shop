@@ -3,7 +3,7 @@ import { ICartItem } from './cart-item-base';
 export class CartServiceItem<TItem extends ICartItem> {
     constructor(
         public readonly item: TItem,
-        public count: number = 0) {
+        public count: number = 1) {
         if (item == null) {
             throw Error('Cannot work with null item');
         }
