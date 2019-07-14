@@ -12,6 +12,7 @@ import { CoreModule } from './core/core.module';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { LayoutModule } from './layout/layout.module';
 import { RouterModule } from '@angular/router';
+import { ApplicationTitleService } from './services/application-title-service';
 
 @NgModule({
   declarations: [
@@ -31,6 +32,7 @@ import { RouterModule } from '@angular/router';
   providers: [
     ProductsService,
     { provide: CartService, useClass: CartService },
+    { provide: ApplicationTitleService, useClass: ApplicationTitleService }
   ],
   bootstrap: [AppComponent]
 })
