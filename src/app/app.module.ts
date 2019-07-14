@@ -3,26 +3,36 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { ProductComponent } from './product/product.component';
-import { ProductListComponent } from './product-list/product-list.component';
 import { ProductsService } from './services/products-service';
-import { CartComponent } from './cart/cart.component';
 import { CartService } from './services/cart-service';
+import { CartModule } from './cart/cart.module';
+import { ProductsModule } from './products/products.module';
+import { SharedModule } from './shared/shared.module';
+import { CoreModule } from './core/core.module';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { LayoutModule } from './layout/layout.module';
+import { RouterModule } from '@angular/router';
+import { ApplicationTitleService } from './services/application-title-service';
 
 @NgModule({
   declarations: [
-    AppComponent,
-    ProductComponent,
-    ProductListComponent,
-    CartComponent
+    AppComponent
   ],
   imports: [
+    NgbModule,
+    RouterModule,
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    LayoutModule,
+    CartModule,
+    ProductsModule,
+    SharedModule,
+    CoreModule
   ],
   providers: [
     ProductsService,
-    CartService
+    { provide: CartService, useClass: CartService },
+    { provide: ApplicationTitleService, useClass: ApplicationTitleService }
   ],
   bootstrap: [AppComponent]
 })

@@ -1,6 +1,10 @@
 import { ProductCategory } from './product-category';
+import { ICartItem } from './cart-item-base';
 
-export class Product {
+export class Product implements ICartItem {
+
+    id: number = 0;
+
     name: string;
 
     description: string;

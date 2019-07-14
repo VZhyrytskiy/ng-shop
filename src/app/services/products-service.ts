@@ -9,14 +9,15 @@ Injectable({
 export class ProductsService {
     getAll(): Product[] {
         return [
-            this.createProduct('Product 1', '', 100, true, ProductCategory.Car),
-            this.createProduct('Product 2', '', 200, true, ProductCategory.Hiking),
-            this.createProduct('Product 3', '', 150, false, ProductCategory.Tourism),
+            this.createProduct(1, 'Product 1', '', 100, true, ProductCategory.Car),
+            this.createProduct(2, 'Product 2', '', 200, true, ProductCategory.Hiking),
+            this.createProduct(3, 'Product 3', '', 150, false, ProductCategory.Tourism),
         ];
     }
 
-    private createProduct(name: string, description: string, price: number, isAvailable: boolean, category: ProductCategory): Product {
+    private createProduct(id: number, name: string, description: string, price: number, isAvailable: boolean, category: ProductCategory): Product {
         const product = new Product();
+        product.id = id;
         product.name = name;
         product.description = description;
         product.price = price;
