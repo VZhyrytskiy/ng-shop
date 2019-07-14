@@ -9,7 +9,8 @@ import { ApplicationTitleService } from './services/application-title-service';
 export class AppComponent implements OnInit {
 
   ngOnInit(): void {
-    this.appHeaderTitle.nativeElement.innerHTML = this.titleService.title;
+    console.log(this.appHeaderTitle.nativeElement);
+    this.appHeaderTitle.nativeElement.innerHTML = 'Application title';
   }
 
   title = 'shop';
@@ -17,5 +18,6 @@ export class AppComponent implements OnInit {
   constructor(private readonly titleService: ApplicationTitleService) {
   }
 
-  @ViewChild('appHeaderTitle', {static: false}) appHeaderTitle: ElementRef;
+  // https://stackoverflow.com/a/56829906 - we should use static:true to have access in OnInit()
+  @ViewChild('appHeaderTitle', {static: true, read: ElementRef}) appHeaderTitle: ElementRef;
 }
