@@ -5,6 +5,10 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ProductsService } from './services/products-service';
 import { CartService } from './services/cart-service';
+import { CartModule } from './cart/cart.module';
+import { ProductsModule } from './products/products.module';
+import { SharedModule } from './shared/shared.module';
+import { CoreModule } from './core/core.module';
 
 @NgModule({
   declarations: [
@@ -12,7 +16,11 @@ import { CartService } from './services/cart-service';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    CartModule,
+    ProductsModule,
+    SharedModule,
+    CoreModule
   ],
   providers: [
     ProductsService,
