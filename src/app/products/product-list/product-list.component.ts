@@ -19,4 +19,8 @@ export class ProductListComponent implements OnInit {
     this.products = this.productsService.getAll();
   }
 
+  buyItemClicked(product: Product): void {
+    console.log(product);
+  }
+
 }
