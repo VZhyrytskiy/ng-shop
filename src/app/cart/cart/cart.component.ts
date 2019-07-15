@@ -12,6 +12,7 @@ export class CartComponent implements OnInit {
 
   cartItems: Array<CartServiceItem<Product>> = [];
 
+  // можно объявить как tuple и вернуть из сервиса
   totalCosts = 0;
   totalCount = 0;
 

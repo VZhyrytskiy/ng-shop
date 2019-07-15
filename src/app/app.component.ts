@@ -18,5 +18,6 @@ export class AppComponent implements OnInit {
   }
 
   // https://stackoverflow.com/a/56829906 - we should use static:true to have access in OnInit()
+  // мы уже разобрали этот момент, надеюсь понятно
   @ViewChild('appHeaderTitle', {static: true, read: ElementRef}) appHeaderTitle: ElementRef;
 }

@@ -31,6 +31,7 @@ import { ApplicationTitleService } from './services/application-title-service';
   ],
   providers: [
     ProductsService,
+    // Можно просто CartService, ApplicationTitleService
     { provide: CartService, useClass: CartService },
     { provide: ApplicationTitleService, useClass: ApplicationTitleService }
   ],
