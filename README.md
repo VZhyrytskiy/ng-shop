@@ -3,7 +3,8 @@
 ## Implemented tasks
 1. [Lesson 1](https://github.com/maximgorbatyuk/ng-shop/blob/master/tasks/task_1.md)
 2. [Lesson 2](https://github.com/maximgorbatyuk/ng-shop/blob/master/tasks/task_2.md)
-2. [Lesson 3](https://github.com/maximgorbatyuk/ng-shop/blob/master/tasks/task_3.md)
+3. [Lesson 3](https://github.com/maximgorbatyuk/ng-shop/blob/master/tasks/task_3.md)
+4. [Lesson 4](https://github.com/maximgorbatyuk/ng-shop/blob/master/tasks/task_4.md)
 
 
 ## Technologies stack
