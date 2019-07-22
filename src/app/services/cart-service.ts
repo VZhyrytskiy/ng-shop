@@ -10,7 +10,6 @@ export class CartService {
     private items: Array<CartServiceItem<Product>> = [];
 
     constructor() {
-        console.log('CartService instance created.');
     }
 
     getItems(): Array<CartServiceItem<Product>> {
@@ -18,13 +17,21 @@ export class CartService {
     }
 
     add(product: Product): void {
-        
-        const item = this.items.find(x => x.item.id === product.id);
+        this.addItems(product, 1);
+    }
+
+    addItems(product: Product, count: number = 1): void {
+        if (count <= 0) {
+            throw Error('Count is invalid');
+        }
+        let item = this.items.find(x => x.item.id === product.id);
         if (item != null) {
-            item.count++;
+            item.count += count;
             console.log(`increased count for ${item.item.name}`);
         } else {
-            this.items.push(this.createCartServiceItem(product));
+            item = this.createCartServiceItem(product);
+            item.count = count;
+            this.items.push(item);
             console.log(`Added item ${product.name}`);
         }
     }
@@ -44,6 +51,10 @@ export class CartService {
         let totalCount = 0;
         this.items.map(x => x.count).forEach(x => totalCount += x);
         return totalCount;
+    }
+
+    clear(): void {
+        this.items = [];
     }
 
     private createCartServiceItem(product: Product): CartServiceItem<Product> {
