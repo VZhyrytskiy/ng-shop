@@ -37,7 +37,7 @@ Angular: Services and DI
    Начиная с 6 версии можно испольовать для регистрации сервисов @Injectable({ providedIn: ...})
    без добавления сервисов в providers: [] CoreModule.
 
-7. Создайте демо-компонент AboutComponent (layout/components/about.component.ts) и внедрите перечисленные выше сервисы.  
+7. [x] Создайте демо-компонент AboutComponent (layout/components/about.component.ts) и внедрите перечисленные выше сервисы.  
    Используйте декоратор @Optional().
 
 8. Напишите директиву shared/directives/<directive-name>, которая добавляет обработчик события click к хост элементу. 

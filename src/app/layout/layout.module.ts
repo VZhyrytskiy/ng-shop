@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { HeaderComponent } from './header/header.component';
 import { RouterModule } from '@angular/router';
 import { AboutComponent } from './static-pages/about/about.component';
+import { SharedModule } from '../shared/shared.module';
 
 
 
@@ -10,7 +11,8 @@ import { AboutComponent } from './static-pages/about/about.component';
   declarations: [HeaderComponent, AboutComponent],
   imports: [
     RouterModule,
-    CommonModule
+    CommonModule,
+    SharedModule
   ],
   exports: [
     HeaderComponent
