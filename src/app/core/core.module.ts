@@ -2,9 +2,12 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { LocalStorageService } from './services/local-storage.service';
 import { ConfigOptionsService } from './services/config-options.service';
-import { ConstantsService } from './services/constant.service';
+import { AppConstants } from './services/constant.service';
+import { GeneratorService } from './services/generator/generator.service';
 
-
+let generatorServiceFactory = () => {
+  return new GeneratorService();
+}
 
 @NgModule({
   declarations: [],
@@ -14,7 +17,8 @@ import { ConstantsService } from './services/constant.service';
   providers: [
     { provide: LocalStorageService, useClass: LocalStorageService },
     { provide: ConfigOptionsService, useClass: ConfigOptionsService },
-    { provide: ConstantsService, useValue: ConstantsService }
+    { provide: AppConstants, useValue: AppConstants },
+    { provide: GeneratorService, useFactory: generatorServiceFactory },
   ]
 })
 export class CoreModule { }
