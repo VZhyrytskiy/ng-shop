@@ -25,7 +25,10 @@ export class GeneratorService {
         return result;
      }
 
-     private getRandomNumber(maxValue: number): number {
+     public getRandomNumber(maxValue: number): number {
+        if (maxValue == null || maxValue <= 0) {
+            throw Error('Invalid number passed');
+        }
         return Math.floor(Math.random() * maxValue);
      }
 }

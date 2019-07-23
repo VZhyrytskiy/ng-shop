@@ -27,7 +27,7 @@ Angular: Services and DI
 4. [x] Создайте сервис ConstantsService (core/services/constant.service.ts), в виде готового литерала объекта,
    например { App: "TaskManager", Ver: "1.0" }. Зарегистрируйте его, используя useValue.
 
-5. Создайте сервис GeneratorService (core/services/generator.ts), который должен генерировать случайную последовательность символов длины n 
+5. [x] Создайте сервис GeneratorService (core/services/generator.ts), который должен генерировать случайную последовательность символов длины n 
    из набора a-z, A-Z, 0-9. Создайте GeneratorFactoryService(n: number), оторый будет предоставлять сгенереную строку.
    Зарегистрируйте его используя useFactory.  
 
