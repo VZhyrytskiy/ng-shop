@@ -40,7 +40,7 @@ Angular: Services and DI
 7. [x] Создайте демо-компонент AboutComponent (layout/components/about.component.ts) и внедрите перечисленные выше сервисы.  
    Используйте декоратор @Optional().
 
-8. Напишите директиву shared/directives/<directive-name>, которая добавляет обработчик события click к хост элементу. 
+8. [x] Напишите директиву shared/directives/<directive-name>, которая добавляет обработчик события click к хост элементу. 
    Клик изменяет размер шрифта элемента, рамку или что-то другое на Ваше усмотрение. 
    Добавьте @Input() для директивы. Используйте ElementRef/Renderer2
 

@@ -17,15 +17,17 @@ export class ProductListComponent implements OnInit {
     public productsService: ProductsService,
     private _cartService: CartService,
     private _titleService: ApplicationTitleService
-  ) { }
+  ) {
+    this._titleService.setTitle('Products');
+    this.productsService.getAll().subscribe(result => {
+      this.products = result;
+    });
+   }
 
   ngOnInit() {
-    this.products = this.productsService.getAll();
-    this._titleService.setTitle('Products');
   }
 
   buyItemClicked(product: Product): void {
     this._cartService.add(product);
   }
-
 }
