@@ -2,7 +2,7 @@
     <div>Id: {{ product.id }}</div>
     <div>Name: {{ product.name }}</div>
     <div>Description: {{ product.description }}</div>
-    <div>Price: {{ product.price }}</div>
+    <div>Price: {{ product.price | money }}</div>
     <div>Category: {{ product.category.toString() }}</div>
     <div>Is available: {{ product.isAvailable }}</div>
 </div>
