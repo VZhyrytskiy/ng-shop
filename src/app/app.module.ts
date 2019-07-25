@@ -13,12 +13,11 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { LayoutModule } from './layout/layout.module';
 import { RouterModule } from '@angular/router';
 import { ApplicationTitleService } from './services/application-title-service';
-import { LocalStorageService } from './core/services/local-storage.service';
+// лишняя зависимость
+// import { LocalStorageService } from './core/services/local-storage.service';
 
 @NgModule({
-  declarations: [
-    AppComponent
-  ],
+  declarations: [AppComponent],
   imports: [
     NgbModule,
     RouterModule,
@@ -37,4 +36,4 @@ import { LocalStorageService } from './core/services/local-storage.service';
   ],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {}

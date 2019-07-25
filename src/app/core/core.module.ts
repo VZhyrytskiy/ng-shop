@@ -18,6 +18,9 @@ let generatorServiceFactory = () => {
     { provide: LocalStorageService, useClass: LocalStorageService },
     { provide: ConfigOptionsService, useClass: ConfigOptionsService },
     { provide: AppConstants, useValue: AppConstants },
+    // Тут надо сделать так, чтобы токен GeneratorService уже ссылался на случайную последовательность
+    // а не на экземпляр класса GeneratorService
+    // Посмотрите еще раз как это сделано в презентации или в демо проекте.
     { provide: GeneratorService, useFactory: generatorServiceFactory },
   ]
 })
